@@ -10,12 +10,12 @@ function Sidebar() {
   ];
   return(
     <aside className={`${styles.sidebar} min-vh-100 py-4`}>
-      <div className="title">Dasboard</div>
+      <div className="fw-semibold px-3 mb-4 fs-4">Dasboard</div>
       <nav>
         {links.map((item, index) => (
-          <div className="navItem" key={index}>
-          <i className={`fa-solid ${item.icon}`}></i>
-          <span>{item.title}</span>
+          <div className={`${styles.navItem} d-flex align-items-center gap-2 px-3 py-4`} key={index}>
+          <i className={`fa-solid ${item.icon} fs-3`}></i>
+          <span className={styles.title}>{item.title}</span>
         </div>
         ))}
       </nav>
